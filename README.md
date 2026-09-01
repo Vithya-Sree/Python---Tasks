@@ -5,11 +5,10 @@ A string is a sequence of characters enclosed within single or double quotes.
 
 1. String Concatenation
 Used to join two or more strings.
-
 Syntax:
 string1 + string2
 
-2. String Indexing
+3. String Indexing
 Used to access individual characters. Indexing starts from 0.
 
 Syntax:
