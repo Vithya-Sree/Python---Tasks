@@ -1,76 +1,120 @@
-## 🐍 Python Strings & Tuples — Quick Reference Notes
+# 🐍 Python Data Structures & Fundamentals
+---
+
+## 📚 Topics Covered
+
+This repository currently covers the following fundamental topics:
+* **Data Structures:** Lists, Dictionaries, Strings, Tuples, and Sets
+* **Control Flow:** Conditional Statements (`if`, `elif`, `else`)
+
+---
+
+## 📝 Python Lists
+A list is an **ordered** and **mutable** collection of elements. Lists can be modified after creation.
+
+### Core List Operations
+* **Creation & Modification:** List creation, adding elements, inserting elements, extending lists
+* **Removal:** Removing elements, popping elements
+* **Ordering:** Sorting lists, reversing a list
+* **Math & Access:** Finding maximum and minimum values, calculating the sum of elements, list indexing, list slicing
+
+---
+
+## 📖 Python Dictionaries
+A dictionary stores data using **key-value pairs**. They are useful when information needs to be associated with a unique identifier.
+
+### Core Dictionary Operations
+* **Access & Mutation:** Dictionary creation, accessing values using keys, adding new key-value pairs, updating existing values
+* **Dictionary Methods:** Using `keys()`, using `values()`, using `items()`
+
+---
 
 ## 🧵 Python Strings
-A string is a sequence of characters enclosed within single or double quotes.
+A string is an **ordered**, **immutable** sequence of characters enclosed within single or double quotes.
 
-## ⚙️ Core String Operations
+### Core String Operations
+* String concatenation
+* String indexing
+* String slicing
+* Reversing a string
 
-* String Concatenation
-* Purpose: Used to join two or more strings together.
-   * Syntax: string1 + string2
-* String Indexing
-* Purpose: Used to access individual characters. Indexing starts from 0.
-   * Syntax: string[index]
-* String Slicing
-* Purpose: Used to extract a part of a string.
-   * Syntax: string[start:end]
-* Reverse a String
-* Purpose: Used to display a string in reverse order.
-   * Syntax: string[::-1]
+### 🛠️ Built-in String Methods
+* `upper()` — Converts text to uppercase
+* `lower()` — Converts text to lowercase
+* `capitalize()` — Capitalizes the first character
+* `count()` — Counts occurrences of a character or substring
+* `replace()` — Replaces part of a string with another value
 
-## 🛠️ Built-in String Methods
+---
 
-* Uppercase
-* Purpose: Converts all characters to uppercase.
-   * Syntax: string.upper()
-* Lowercase
-* Purpose: Converts all characters to lowercase.
-   * Syntax: string.lower()
-* Capitalize
-* Purpose: Converts the first character of a string to uppercase.
-   * Syntax: string.capitalize()
-* Count
-* Purpose: Counts the number of occurrences of a character or substring.
-   * Syntax: string.count(value)
-* Replace
-* Purpose: Replaces a specified value with another value.
-   * Syntax: string.replace(old, new)
-
-------------------------------
 ## 📦 Python Tuples
-A tuple is an ordered collection of elements. Tuples are immutable, meaning their values cannot be changed after creation.
+A tuple is an **ordered** collection of elements. Tuples are **immutable**, meaning their values cannot be changed directly after creation.
 
-## ⚙️ Core Tuple Operations
+### Core Tuple Operations
+* Tuple creation
+* Tuple concatenation
+* Tuple repetition
+* Tuple indexing
+* Tuple slicing
 
-* Tuple Creation
-* Purpose: Used to create a tuple containing multiple values.
-   * Syntax: tuple_name = (value1, value2, value3)
-* Tuple Concatenation
-* Purpose: Used to combine two or more tuples.
-   * Syntax: tuple1 + tuple2
-* Tuple Repetition
-* Purpose: Repeats the elements of a tuple a specified number of times.
-   * Syntax: tuple_name * number
-* Tuple Indexing
-* Purpose: Used to access an individual element from a tuple.
-   * Syntax: tuple_name[index]
-* Tuple Slicing
-* Purpose: Used to access a specific range of elements.
-   * Syntax: tuple_name[start:end]
+---
 
-------------------------------
-## 🧠 Key Summary Points
+## 🔢 Python Sets
+A set is an **unordered** collection of **unique** elements. Sets automatically remove duplicate values.
 
-## 🎯 Shared Features
+### Core Set Operations
+* Set creation
+* Understanding uniqueness
+* Mathematical operations: Union, Intersection
 
-* Indexing & Slicing: Both strings and tuples support zero-based indexing and range-based slicing.
-* Immutability: Both data types are immutable and cannot be altered directly after creation.
+> ⚠️ **Set Indexing Warning:** Sets do not support indexing because they are unordered collections. Attempting to access a set using an index results in a `TypeError`.
 
-## ⚖️ Differences Overview
+---
 
-| Feature | Strings | Tuples |
-|---|---|---|
-| Element Type | Sequence of text characters only | Ordered collection of any data types |
-| Syntax | Enclosed in single (' ') or double (" ") quotes | Enclosed in parentheses (( )) |
-| Repetition Operator | Not highlighted in base operations | Directly supports the * multiplier operator |
+## 🔀 Conditional Statements
+Conditional statements are used to make decisions in Python based on specific conditions.
 
+### Core Syntax
+* `if`
+* `elif`
+* `else`
+
+## 📊 Python Data Structures — Comparison
+
+Understanding the differences between Python's built-in data structures makes it easier to choose the right one for a particular task.
+
+| Feature | List | Tuple | Set | Dictionary | String |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Ordered** | Yes | Yes | No\* | Yes\*\* | Yes |
+| **Mutable** | Yes | No | Yes | Yes | No |
+| **Allows Duplicates** | Yes | Yes | No | Keys: No / Values: Yes | Yes |
+| **Indexing** | Yes | Yes | No | By key | Yes |
+| **Slicing** | Yes | Yes | No | No | Yes |
+| **Data Type** | Any data type | Any data type | Any hashable type | Key-value pairs | Characters |
+| **Syntax** | `[ ]` | `( )` | `{ }` | `{key: value}` | `' '` or `" "` |
+| **Main Use** | Changeable items | Fixed items | Unique items | Key-value data | Text / Characters |
+
+*\* Sets are unordered collections and do not support indexing or slicing.*  
+*\*\* Dictionaries preserve insertion order in modern Python versions, but they are accessed by keys rather than numerical indexes.*
+
+---
+
+## 🧠 Quick Summary
+
+* **📝 List:** Ordered | Mutable | Allows duplicates | Supports indexing/slicing. Suitable for collections that change.
+* **📦 Tuple:** Ordered | Immutable | Allows duplicates | Supports indexing/slicing. Suitable for protected/fixed collections.
+* **🔢 Set:** Unordered | Mutable | Unique values only | No indexing/slicing. Useful for uniqueness checks and set math.
+* **📖 Dictionary:** Key-Value | Mutable | Unique keys | Key-indexed. Useful for paired/related data.
+* **🧵 String:** Ordered Characters | Immutable | Allows duplicate characters | Supports indexing/slicing. Used for text.
+
+---
+
+## 🔑 Important Concepts to Remember
+
+* **Mutable:** The object can be changed after creation.
+* **Immutable:** The object cannot be changed after creation.
+* **Ordered:** Elements maintain a defined order.
+* **Indexing:** Elements can be accessed using numerical positions.
+* **Slicing:** A portion of a sequence can be accessed using a range of indexes.
+* **Unique:** Duplicate values are not stored.
+* **Key-Value Pair:** Data is stored using a key associated with a value.
